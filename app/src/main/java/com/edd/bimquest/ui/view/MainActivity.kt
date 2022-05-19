@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.edd.bimquest.data.model.PostModel
 import com.edd.bimquest.databinding.ActivityMainBinding
 import com.edd.bimquest.ui.viewmodel.PostViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -17,11 +20,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        postViewModel.getPost()
+       postViewModel.onCreate()
 
-        postViewModel.postModel.observe(this, Observer { currentPost ->
-            println("GET IN")
-            println(currentPost.userId)
+        postViewModel.postModel.observe(this, Observer { posts ->
+            posts.forEach { currentPost ->
+                val post : PostModel = currentPost
+                println(post.body +  " " + post.id)
+            }
         })
 
     }
