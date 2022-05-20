@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.16354166666666667" />
+        <entry key="app/src/main/res/drawable/rounded_edittext.xml" value="0.186" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/card_layout.xml" value="0.165" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/image_card_opt.xml" value="0.147" />
       </map>
     </option>
   </component>

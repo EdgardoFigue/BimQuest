@@ -1,5 +1,6 @@
 package com.edd.bimquest.di
 
+import androidx.recyclerview.widget.RecyclerView
 import com.edd.bimquest.data.network.PostApiClient
 import dagger.Module
 import dagger.Provides
